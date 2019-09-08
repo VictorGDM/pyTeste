@@ -6,36 +6,15 @@ pygame.init()
 Carrega as imagens utilizadas no jogo
 """
 ###-----------------------------------------------------------###
-tema = 0
 
 #--Menu--#
-menu = pygame.image.load(f'telas/menu/menu{tema}/menu.png')
-menu1 = pygame.image.load(f'telas/menu/menu{tema}/menuJogar.png')
-menu2 = pygame.image.load(f'telas/menu/menu{tema}/menuInstrucoes.png')
-menu3 = pygame.image.load(f'telas/menu/menu{tema}/menuCreditos.png')
-menu4 = pygame.image.load(f'telas/menu/menu{tema}/menuOpcoes.png')
-menu5 = pygame.image.load(f'telas/menu/menu{tema}/menuSair.png')
-
-
-def mdrTema(t):
-    global tema
-    global menu
-    global menu1
-    global menu2
-    global menu3
-    global menu4
-    global menu5
-
-    tema = t
-    print(id(menu))
-    menu = pygame.image.load(f'telas/menu/menu{tema}/menu.png')
-    menu1 = pygame.image.load(f'telas/menu/menu{tema}/menuJogar.png')
-    menu2 = pygame.image.load(f'telas/menu/menu{tema}/menuInstrucoes.png')
-    menu3 = pygame.image.load(f'telas/menu/menu{tema}/menuCreditos.png')
-    menu4 = pygame.image.load(f'telas/menu/menu{tema}/menuOpcoes.png')
-    menu5 = pygame.image.load(f'telas/menu/menu{tema}/menuSair.png')
-    print(id(menu))
-
+menu = pygame.image.load(f'telas/menu/menu0/menu.png')
+menu1 = pygame.image.load(f'telas/menu/menu0/menuJogar.png')
+menu2 = pygame.image.load(f'telas/menu/menu0/menuInstrucoes.png')
+menu3 = pygame.image.load(f'telas/menu/menu0/menuCreditos.png')
+menu4 = pygame.image.load(f'telas/menu/menu0/menuOpcoes.png')
+menu5 = pygame.image.load(f'telas/menu/menu0/menuSair.png')
+    
 #--Instruções--#
 instrucoes = pygame.image.load('telas/submenu/instrucoes/instrucoes.png')
 instruVolt = pygame.image.load('telas/submenu/instrucoes/instrucoesVoltar.png')
@@ -57,16 +36,27 @@ creditos = pygame.image.load('telas/submenu/creditos/creditos.png')
 creditosVolt = pygame.image.load('telas/submenu/creditos/creditosVoltar.png')
 
 #--Opções--#
-opcoes = pygame.image.load(f'telas/submenu/opcoes/opcao{tema}/opcao.png')
-opcoesVoltar = pygame.image.load(f'telas/submenu/opcoes/opcao{tema}/opcaoVoltar.png')
+opcoes = pygame.image.load(f'telas/submenu/opcoes/opcao0/opcao.png')
+opcoesVoltar = pygame.image.load(f'telas/submenu/opcoes/opcao0/opcaoVoltar.png')
 
 #--Jogo--#
 jogo = pygame.image.load('telas/jogo/jogo.png')
 jogo1 = pygame.image.load('telas/jogo/jogoSair.png')
 
+def mdrTema(t):
+    global menu, menu1, menu2, menu3, menu4, menu5, opcoes, opcoesVoltar
+    
+    menu = pygame.image.load(f'telas/menu/menu{t}/menu.png')
+    menu1 = pygame.image.load(f'telas/menu/menu{t}/menuJogar.png')
+    menu2 = pygame.image.load(f'telas/menu/menu{t}/menuInstrucoes.png')
+    menu3 = pygame.image.load(f'telas/menu/menu{t}/menuCreditos.png')
+    menu4 = pygame.image.load(f'telas/menu/menu{t}/menuOpcoes.png')
+    menu5 = pygame.image.load(f'telas/menu/menu{t}/menuSair.png')
+
+    opcoes = pygame.image.load(f'telas/submenu/opcoes/opcao{t}/opcao.png')
+    opcoesVoltar = pygame.image.load(f'telas/submenu/opcoes/opcao{t}/opcaoVoltar.png')
 
 eE = pygame.image.load('telas/submenu/sair/eE.png')
-
 
 """
 def mdrTema(t):
