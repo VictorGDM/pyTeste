@@ -1,5 +1,5 @@
 import pygame
-import crgImg, crgSons, idtBto
+import crgImg, idtBto
 pygame.init()
 
 ###-----------------------------------------------------------###
@@ -19,38 +19,26 @@ Tela, Camada, Tema
 """
 ###-------------###
 
-def prxTela(c, b, t, s):
+def prxTela(c, b, t):
 
     #--Telas do menu--#
     if c == 0:
         if b == 1:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.jogo, 1
             
         if b == 2:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.instrucoes, 2
 
         if b == 3:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.creditos, 3
 
         if b == 4:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.opcoes, 4
 
         if b == 5:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return False
 
         if b == 6:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.eE, 100
 
         else:
@@ -59,8 +47,6 @@ def prxTela(c, b, t, s):
     #--Telas do jogo--#
     if c == 1:
         if b == 1:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
 
         else:
@@ -87,8 +73,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
 
         else:
@@ -97,8 +81,6 @@ def prxTela(c, b, t, s):
     #--Telas dos Créditos--#
     if c == 3:
         if b == 1:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -119,8 +101,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.opcoes, 4, 3
 
         if b == 5:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0, t
 
         else:
@@ -149,8 +129,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -176,8 +154,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -203,8 +179,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -230,8 +204,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -257,8 +229,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instruRei, 25
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:
@@ -284,8 +254,6 @@ def prxTela(c, b, t, s):
             return True, crgImg.instrucoes, 2
 
         if b == 7:
-            som = crgSons.mdrSom(s)
-            pygame.mixer.music.play()
             return True, crgImg.menu, 0
         
         else:

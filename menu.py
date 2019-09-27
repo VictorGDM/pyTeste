@@ -1,5 +1,5 @@
-import sysconfig, pygame
-import crgImg, idtBto, tcrTela, crgSons
+import sys, pygame
+import crgImg, idtBto, tcrTela
 
 ###-----------------------------------------------------------###
 """
@@ -17,8 +17,6 @@ pygame.init()
 size = width, height = 1000, 650
 screen = pygame.display.set_mode(size)
 executando = True
-tSom = 0
-som = crgSons.mdrSom(tSom)
 botao = 0
 tema = 0
 
@@ -41,29 +39,28 @@ while executando == True:
 
         if event.type == pygame.MOUSEBUTTONUP:
             if camada == 4:
-                mudou, tela, camada, tema = tcrTela.prxTela(camada, botao, tema, tSom)
+                mudou, tela, camada, tema = tcrTela.prxTela(camada, botao, tema)
                 crgImg.mdrTema(tema)
                 updateScreen(tela)
 
             elif camada == 0 and botao == 5:
-                executando = tcrTela.prxTela(camada, botao, tema, tSom)
+                executando = tcrTela.prxTela(camada, botao, tema)
 
             else:
-                mudou, tela_r, camada_r = tcrTela.prxTela(camada, botao, tema, tSom)    
+                mudou, tela_r, camada_r = tcrTela.prxTela(camada, botao, tema)    
                 if(mudou):
                     tela = tela_r
                     camada = camada_r
                     updateScreen(tela)
 
-    print(f'x:{x} y:{y} b:{botao} t:{tema} c:{camada} tS:{tSom}')
+    print(f'x:{x} y:{y} b:{botao} t:{tema} c:{camada}')
 
-    mudou, tela_r, botao_r, tSom_r = idtBto.btMouse(x, y, camada, tela)
+    mudou, tela_r, botao_r = idtBto.btMouse(x, y, camada, tela)
     
     if(mudou):
         tela = tela_r
         botao = botao_r
-        tSom = tSom_r
         updateScreen(tela)
 
 pygame.quit()
-sysconfig.exit()
+sys.exit()
