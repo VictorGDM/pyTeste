@@ -39,9 +39,12 @@ while executando == True:
 
         if event.type == pygame.MOUSEBUTTONUP:
             if camada == 4:
-                mudou, tela, camada, tema = tcrTela.prxTela(camada, botao, tema)
-                crgImg.mdrTema(tema)
-                updateScreen(tela)
+                if botao == 0 or botao == 5:
+                    mudou, tela, camada = tcrTela.prxTela(camada, botao, tema)
+                else:
+                    mudou, tela, camada, tema = tcrTela.prxTela(camada, botao, tema)
+                    crgImg.mdrTema(tema)
+                    updateScreen(tela)
 
             elif camada == 0 and botao == 5:
                 executando = tcrTela.prxTela(camada, botao, tema)

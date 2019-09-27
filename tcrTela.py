@@ -15,7 +15,8 @@ Recebe:
 Camada, Botão, Tema
 
 Retorna:
-Tela, Camada, Tema
+Se a tela mudou, Tela, Camada
+Se a tela mudou, Tela, Camada, Tema <<< No caso de configurações.
 """
 ###-------------###
 
@@ -101,10 +102,10 @@ def prxTela(c, b, t):
             return True, crgImg.opcoes, 4, 3
 
         if b == 5:
-            return True, crgImg.menu, 0, t
+            return True, crgImg.menu, 0
 
         else:
-            return False, crgImg.opcoes, 4, t
+            return False, crgImg.opcoes, 4
 
     """------------"""
     #--Instruções.2--#
