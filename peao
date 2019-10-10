@@ -1,0 +1,9 @@
+class piao (pygame.sprite.Sprite):
+    def _init_(self):
+        pygame.sprite.Sprite._init_(self)
+        self.imagemPeao = pygame.image.load('')
+
+        self.rect = self.imagemPeao.get_react()
+
+    def movimento():
+        print('a')
